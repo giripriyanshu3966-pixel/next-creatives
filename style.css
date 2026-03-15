@@ -1,0 +1,118 @@
+body{
+
+font-family: Arial;
+margin:0;
+background:#f4f6fb;
+
+}
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:#111;
+color:white;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:20px;
+
+}
+
+nav ul li a{
+
+color:white;
+text-decoration:none;
+
+}
+
+.hero{
+
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+
+}
+
+.hero button{
+
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+
+}
+
+#services{
+
+padding:80px;
+text-align:center;
+
+}
+
+.services-container{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+width:250px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+#creator,#brand{
+
+padding:80px;
+text-align:center;
+
+}
+
+input{
+
+display:block;
+margin:10px auto;
+padding:10px;
+width:250px;
+
+}
+
+button{
+
+padding:10px 20px;
+border:none;
+background:#667eea;
+color:white;
+cursor:pointer;
+
+}
+
+footer{
+
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+
+}
