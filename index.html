@@ -14,6 +14,11 @@
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+<h2>Loading Next Creatives...</h2>
+</div>
+
 <!-- NAVBAR -->
 
 <nav>
@@ -21,16 +26,15 @@
 <h2 class="logo">Next Creatives</h2>
 
 <ul>
-
 <li><a href="#">Home</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#creator">Creators</a></li>
 <li><a href="#brand">Brands</a></li>
-
 </ul>
 
-</nav>
+<button onclick="toggleDark()">🌙</button>
 
+</nav>
 
 <!-- HERO -->
 
@@ -45,44 +49,36 @@
 
 </section>
 
-
 <!-- SERVICES -->
 
-<section id="services">
+<section id="services" class="reveal">
 
 <h2>Our Services</h2>
 
 <div class="services-container">
 
-<div class="card">
-
+<div class="card reveal">
 <h3>Influencer Marketing</h3>
 <p>Brands collaborate with influencers for promotion.</p>
-
 </div>
 
-<div class="card">
-
+<div class="card reveal">
 <h3>UGC Content</h3>
 <p>Creators produce product photos and videos.</p>
-
 </div>
 
-<div class="card">
-
+<div class="card reveal">
 <h3>Campaign Management</h3>
 <p>We manage brand campaigns from start to finish.</p>
-
 </div>
 
 </div>
 
 </section>
 
-
 <!-- CREATOR FORM -->
 
-<section id="creator">
+<section id="creator" class="reveal">
 
 <h2>Join as Creator</h2>
 
@@ -97,10 +93,9 @@
 
 </section>
 
-
 <!-- BRAND FORM -->
 
-<section id="brand">
+<section id="brand" class="reveal">
 
 <h2>For Brands</h2>
 
@@ -111,44 +106,42 @@
 
 <button onclick="submitBrand()">Submit</button>
 
+</section>
 
-  <section class="trust">
+<!-- TRUST SECTION -->
+
+<section class="trust reveal">
 
 <h2>Why Choose Next Creatives?</h2>
 
 <div class="trust-box">
 
 <div>
-<h3>50+</h3>
+<h3 class="counter" data-target="50">0</h3>
 <p>Creators Joined</p>
 </div>
 
 <div>
-<h3>10+</h3>
+<h3 class="counter" data-target="10">0</h3>
 <p>Campaigns Completed</p>
 </div>
 
 <div>
-<h3>100%</h3>
+<h3 class="counter" data-target="100">0</h3>
 <p>Trusted Platform</p>
 </div>
 
 </div>
 
 </section>
-</section>
-
 
 <!-- FOOTER -->
 
 <footer>
-
 <p>© 2026 Next Creatives</p>
-
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
