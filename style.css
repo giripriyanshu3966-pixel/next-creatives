@@ -116,3 +116,13 @@ text-align:center;
 padding:20px;
 
 }
+.trust{
+text-align:center;
+padding:60px;
+}
+
+.trust-box{
+display:flex;
+justify-content:center;
+gap:40px;
+}
