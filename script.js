@@ -2,35 +2,89 @@ const url="https://script.google.com/macros/s/AKfycbwnVLGB32SroBcV0FXm0nJ22qZxKf
 
 // CREATOR
 function submitCreator(){
+
 let data = new URLSearchParams();
 
-data.append("type","creator");
-data.append("name",name.value);
-data.append("instagram",instagram.value);
-data.append("followers",followers.value);
-data.append("niche",niche.value);
-data.append("email",email.value);
-data.append("phone",phone.value);
+// GET VALUES SAFELY
+let name = document.getElementById("name").value;
+let instagram = document.getElementById("instagram").value;
+let followers = document.getElementById("followers").value;
+let niche = document.getElementById("niche").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
 
-fetch(url,{method:"POST",mode:"no-cors",body:data});
-
-alert("Creator Submitted Successfully");
+// VALIDATION
+if(!name || !instagram){
+alert("Please fill required fields");
+return;
 }
+
+data.append("type","creator");
+data.append("name", name);
+data.append("instagram", instagram);
+data.append("followers", followers);
+data.append("niche", niche);
+data.append("email", email);
+data.append("phone", phone);
+
+// SEND DATA
+fetch(url,{
+method:"POST",
+mode:"no-cors",
+body:data
+});
+
+alert("✅ Creator Submitted Successfully");
+
+// CLEAR FORM
+document.getElementById("name").value="";
+document.getElementById("instagram").value="";
+document.getElementById("followers").value="";
+document.getElementById("niche").value="";
+document.getElementById("email").value="";
+document.getElementById("phone").value="";
+}
+
 
 // BRAND
 function submitBrand(){
+
 let data = new URLSearchParams();
 
-data.append("type","brand");
-data.append("brand",brandname.value);
-data.append("typebrand",typebrand.value);
-data.append("email",brandemail.value);
-data.append("phone",brandphone.value);
+// GET VALUES SAFELY
+let brand = document.getElementById("brandname").value;
+let typebrand = document.getElementById("typebrand").value;
+let email = document.getElementById("brandemail").value;
+let phone = document.getElementById("brandphone").value;
 
-fetch(url,{method:"POST",mode:"no-cors",body:data});
-
-alert("Brand Submitted Successfully");
+// VALIDATION
+if(!brand){
+alert("Please enter brand name");
+return;
 }
+
+data.append("type","brand");
+data.append("brand", brand);
+data.append("typebrand", typebrand);
+data.append("email", email);
+data.append("phone", phone);
+
+// SEND DATA
+fetch(url,{
+method:"POST",
+mode:"no-cors",
+body:data
+});
+
+alert("✅ Brand Submitted Successfully");
+
+// CLEAR FORM
+document.getElementById("brandname").value="";
+document.getElementById("typebrand").value="";
+document.getElementById("brandemail").value="";
+document.getElementById("brandphone").value="";
+}
+
 
 // SCROLL ANIMATION
 window.addEventListener("scroll", function(){
@@ -41,10 +95,12 @@ el.classList.add("active");
 });
 });
 
+
 // DARK MODE
 function toggleDark(){
 document.body.classList.toggle("dark");
 }
+
 
 // COUNTER
 document.querySelectorAll(".counter").forEach(counter=>{
