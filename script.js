@@ -20,7 +20,7 @@ return;
 }
 
 data.append("type","creator");
-data.append("name", name);
+data.append("Name", Name);
 data.append("instagram", instagram);
 data.append("followers", followers);
 data.append("niche", niche);
